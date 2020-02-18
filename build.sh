@@ -1,0 +1,1 @@
+docker build -t ctf:ubuntu19.10 .
