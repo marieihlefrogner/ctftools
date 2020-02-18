@@ -7,6 +7,7 @@
 ---
 
 ## Setup
+- Install Docker: https://docs.docker.com/install/
 - `./build.sh`
 
 ## Run 
