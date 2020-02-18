@@ -18,6 +18,6 @@
                     /path/to/this/repo/start.sh
             fi
     }
-```
+    ```
 - `source ~/.bash_profile` to load the changes
 - Now you can build with `ctftools build` and run with `ctftools`!
