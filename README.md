@@ -30,12 +30,12 @@
 ---
 
 ## Tool list
-From APT: 
+From apt: 
 ```
 zsh jq strace ltrace curl wget rubygems gcc dnsutils netcat gcc-multilib net-tools vim gdb gdb-multiarch python python-pip python3 python3-pip python3-dev libssl-dev libffi-dev  git make procps libpcre3-dev libdb-dev libxt-dev libxaw7-dev libc6:i386 libncurses5:i386 libstdc++6:i386
 ```
 
-From PIP3:
+From pip3:
 ```
 keystone-engine unicorn capstone ropper pwntools
 ```
