@@ -1,6 +1,7 @@
 # CTF tools in Docker
 
 - Based on https://github.com/LiveOverflow/pwn_docker_example/tree/master/ctf
+    - Video here: https://www.youtube.com/watch?v=cPGZMt4cJ0I
 - Collection of useful tools for CTF challenges, bundled up in a Docker image based on Ubuntu.
 - Makes the current working directory available within the container (`/pwd`).
 - Very useful if you are on Mac OS, and want to be able to run binaries compiled for Linux.
