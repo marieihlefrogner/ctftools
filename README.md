@@ -46,4 +46,9 @@ From gem:
 zsteg
 ```
 
+Manually installed:
+```
+gdb-peda
+```
+
 Shell: zsh with oh-my-zsh
