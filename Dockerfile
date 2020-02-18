@@ -7,7 +7,6 @@ RUN apt-get update && apt-get install -y build-essential zsh jq strace ltrace cu
 RUN pip3 install keystone-engine unicorn capstone ropper pwntools
 
 ENV TERM xterm
-ENV ZSH_THEME agnoster
 RUN wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true
 
 WORKDIR /pwd
