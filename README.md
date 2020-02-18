@@ -46,7 +46,7 @@ From gem:
 zsteg
 ```
 
-Manually installed:
+Other:
 ```
 gdb-peda
 ```
