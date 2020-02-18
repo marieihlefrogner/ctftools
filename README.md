@@ -41,4 +41,9 @@ From pip3:
 keystone-engine unicorn capstone ropper pwntools
 ```
 
+From gem:
+```
+zsteg
+```
+
 Shell: zsh with oh-my-zsh
