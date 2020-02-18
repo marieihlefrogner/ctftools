@@ -41,4 +41,4 @@ From pip3:
 keystone-engine unicorn capstone ropper pwntools
 ```
 
-Shell: zsh (with oh-my-zsh)
+Shell: zsh with oh-my-zsh (theme `agnoster`)
