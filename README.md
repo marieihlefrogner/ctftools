@@ -6,7 +6,7 @@
 - Makes the current working directory available within the container (`/pwd`).
 - Very useful if you are on Mac OS, and want to be able to run binaries compiled for Linux.
 - Feel free to fork this repo and add the tools you want!
-- *Note*: Untested on Windows
+- *Note*: Not tested on Windows
 ---
 
 ## Setup
