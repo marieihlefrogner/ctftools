@@ -1,1 +1,1 @@
-docker build -t ctftools:ubuntu19.10 .
+docker build -t ctftools:ubuntu20.04 .
