@@ -1,1 +1,1 @@
-docker build -t ctftools:ubuntu20.04 .
+docker build -t marieif/ctftools .

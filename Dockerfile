@@ -12,6 +12,7 @@ RUN apt-get update
 RUN add-apt-repository universe
 RUN apt-get update
 RUN apt-get install -y python2 python2-dev
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash
 RUN curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
 RUN python2 get-pip.py
 
@@ -20,10 +21,7 @@ RUN apt-get update && \
     build-essential zsh jq strace ltrace wget rubygems gcc dnsutils netcat tmux \
     gcc-multilib net-tools vim gdb gdb-multiarch python3 python3-pip python3-dev \
     libssl-dev libffi-dev wget git make procps libpcre3-dev libdb-dev libxt-dev libxaw7-dev \
-    libc6:i386 libncurses5:i386 libstdc++6:i386 zbar-tools imagemagick
-
-RUN curl -sL https://deb.nodesource.com/setup_12.x | bash
-RUN apt-get install -y nodejs
+    libc6:i386 libncurses5:i386 libstdc++6:i386 zbar-tools imagemagick nodejs
 
 # npm packages
 RUN npm install -g qrcode

@@ -11,35 +11,28 @@
 
 ## Setup
 - Install Docker: https://docs.docker.com/install/
-- `./build.sh`
+- Optionally you can clone this repo and build it youself before running: `./build`
+- Run docker image (in the directory you want to work from): `./start` or
 
-## Run 
-- `./start.sh`
-
-## Make it easier to run (optional)
-- Open `~/.bash_profile` in a text editor (or wherever you have your bash aliases and functions)
-- Write (replace `/path/to/this/repo` with the actual path):
-    ```
-    ctftools() {
-            if [ "$1" = "--build" ]; then
-                    /path/to/this/repo/build.sh
-            else
-                    /path/to/this/repo/start.sh
-            fi
-    }
-    ```
-- `source ~/.bash_profile` to load the changes
-- Now you can build with the command `ctftools --build` and run with `ctftools` from anywhere!
+```bash
+docker run --rm -v $PWD:/pwd --cap-add=SYS_PTRACE --security-opt seccomp=unconfined -d --name ctftools -i marieif/ctftools > /dev/null && \
+docker exec -it ctftools /bin/zsh; docker stop -t 1 ctftools > /dev/null
+```
 
 ---
 
 ## Tool/package list - this is included from the Dockerfile
 From apt: 
 ```
-zsh jq strace ltrace curl wget rubygems gcc dnsutils netcat gcc-multilib net-tools 
-vim gdb gdb-multiarch python python-pip python3 python3-pip python3-dev 
-libssl-dev libffi-dev  git make procps libpcre3-dev libdb-dev libxt-dev 
-libxaw7-dev libc6:i386 libncurses5:i386 libstdc++6:i386
+build-essential zsh jq strace ltrace wget rubygems gcc dnsutils netcat tmux
+gcc-multilib net-tools vim gdb gdb-multiarch python3 python3-pip python3-dev
+libssl-dev libffi-dev wget git make procps libpcre3-dev libdb-dev libxt-dev libxaw7-dev
+libc6:i386 libncurses5:i386 libstdc++6:i386 zbar-tools imagemagick nodejs
+```
+
+From npm
+```
+qrcode
 ```
 
 From pip3 (python3.x):
