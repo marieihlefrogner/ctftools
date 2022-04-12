@@ -12,7 +12,7 @@
 ## Setup
 - Install Docker: https://docs.docker.com/install/
 - Optionally you can clone this repo and build it youself before running: `./build`
-- Run docker image (in the directory you want to work from): `./start` or
+- Run docker image (in the directory you want to work from): `./start` or if you don't want to clone: 
 
 ```bash
 docker run --rm -v $PWD:/pwd --cap-add=SYS_PTRACE --security-opt seccomp=unconfined -d --name ctftools -i marieif/ctftools > /dev/null && \
