@@ -1,6 +1,9 @@
 FROM ubuntu:20.04
+
 ENV LC_CTYPE C.UTF-8
 ENV DEBIAN_FRONTEND=noninteractive
+ENV TERM xterm
+
 RUN dpkg --add-architecture i386
 
 RUN apt-get update
@@ -14,12 +17,16 @@ RUN python2 get-pip.py
 
 RUN apt-get update && \
     apt-get install -y \
-    build-essential zsh jq strace ltrace wget rubygems gcc dnsutils netcat \
+    build-essential zsh jq strace ltrace wget rubygems gcc dnsutils netcat tmux \
     gcc-multilib net-tools vim gdb gdb-multiarch python3 python3-pip python3-dev \
     libssl-dev libffi-dev wget git make procps libpcre3-dev libdb-dev libxt-dev libxaw7-dev \
-    libc6:i386 libncurses5:i386 libstdc++6:i386
+    libc6:i386 libncurses5:i386 libstdc++6:i386 zbar-tools imagemagick
 
-ENV TERM xterm
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash
+RUN apt-get install -y nodejs
+
+# npm packages
+RUN npm install -g qrcode
 
 # Python 2.7 packages
 RUN pip2 install pwntools
