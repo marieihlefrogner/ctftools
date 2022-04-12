@@ -4,4 +4,4 @@ docker run --rm -v $PWD:/pwd --cap-add=SYS_PTRACE --security-opt seccomp=unconfi
 docker exec -it ctftools /bin/zsh
 
 echo "Stopping CTF Tools..."
-docker stop ctftools > /dev/null
+docker stop -t 1 ctftools > /dev/null
