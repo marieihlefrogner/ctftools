@@ -11,13 +11,18 @@
 
 ## Setup
 - Install Docker: https://docs.docker.com/install/
-- Optionally you can clone this repo and build it youself before running: `./build.sh`
-- Run docker image (in the directory you want to work from): `./start.sh` or if you don't want to clone: 
+- Run (it needs some extra privileges, see the video mentioned above for explanation)
 
 ```bash
 docker run --rm -v $PWD:/pwd --cap-add=SYS_PTRACE --security-opt seccomp=unconfined -d --name ctftools -i marieif/ctftools > /dev/null && \
 docker exec -it ctftools /bin/zsh; docker stop -t 1 ctftools > /dev/null
 ```
+
+### Manual setup (Optional)
+
+- Clone this repo
+- Build: `./build.sh`
+- Run (in the directory you want to work from): `./start.sh`
 
 ---
 
