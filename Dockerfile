@@ -24,7 +24,7 @@ RUN apt-get update && \
     libc6:i386 libncurses5:i386 libstdc++6:i386 zbar-tools imagemagick nodejs
 
 # npm packages
-RUN npm install -g qrcode
+RUN npm install -g qrcode morse
 
 # Python 2.7 packages
 RUN pip2 install pwntools
